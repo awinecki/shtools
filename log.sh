@@ -1,3 +1,3 @@
 log() {
-	echo "[LOG] $1"
+	echo "[INFO] $1"
 }
