@@ -1,3 +1,6 @@
+source "./datetime.sh"
+
 log() {
-	echo "[${1^^}] $2"
+	type="$(echo $1 | tr '[:lower:]' '[:upper:]')"
+	echo "[$(datetime)][${type}] $2"
 }
