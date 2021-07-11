@@ -4,5 +4,5 @@ import "./datetime.sh"
 # $2: log msg body
 log() {
 	type="$(echo $1 | tr '[:lower:]' '[:upper:]')"
-	echo "[$(datetime)][${type}] $2 (test)"
+	echo "[$(datetime)][${type}] $2"
 }
