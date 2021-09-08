@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. "$(command -v import)"; function get() { set -e; dep=$1; [[ -n $LOCAL ]] && source $(dirname $0)/$dep || import $dep; }
+[ "$(uname -s)" = "Darwin" ] && __i="$HOME/Library/Caches" || __i="$HOME/.cache" && __i="${IMPORT_CACHE:-${XDG_CACHE_HOME:-${LOCALAPPDATA:-${__i}}}/import.sh}/import" && [ -r "$__i" ] || curl -sfLSo "$__i" --create-dirs https://import.sh && . "$__i" && unset __i; function get() { set -e; dep=$1; [[ -n $LOCAL ]] && source $(dirname $0)/$dep || import $dep; }
 
 get ./datetime.sh
 get ./colors.sh
