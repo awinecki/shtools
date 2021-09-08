@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-function get() { set -e; dep=$1; [[ -n $LOCAL ]] && source $(dirname $0)/$dep || import $dep; } ; . "$(command -v import)";
+. "$(command -v import)"; function get() { set -e; dep=$1; [[ -n $LOCAL ]] && source $(dirname $0)/$dep || import $dep; }
 
 get ./validate.sh
 get ./log.sh
