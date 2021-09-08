@@ -9,6 +9,7 @@ function aws_regions() { set -e
   binary_exists aws
 	aws ec2 describe-regions --region us-east-1 --output text | cut -f4
   log info "done!"
+  log warn "ITS WORKING!!!"
   echo "DONE"
 }
 
