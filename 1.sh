@@ -1,7 +1,9 @@
 #!/usr/bin/env import
 
-# The URL is downloaded once, cached forever, and then sourced
-import "https://git.io/fAWiz"
+import "awinecki/shtools/aws/aws.sh"
 
-add 20 22
+# The URL is downloaded once, cached forever, and then sourced
+# import "https://git.io/fAWiz"
+
+aws_regions
 # 42

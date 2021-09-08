@@ -1,6 +1,7 @@
-#!/usr/bin/env import
-import ../validate.sh
-
+#!/usr/bin/env bash
+# import ../validate.sh || source $(dirname "$0")/../validate.sh
+. "$(command -v import)"
+[[ -n $LOCAL ]] && source $(dirname $0)/../validate.sh || import ../validate.sh
 
 function aws_regions() { set -e
   binary_exists aws
