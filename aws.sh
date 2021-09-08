@@ -10,12 +10,11 @@ function aws_regions() { set -e
 }
 
 function list_ec2_in_all_regions() { set -e
-  binary_exists aws
-  binary_exists jq
+  binary_exists aws jq
   for region in $(aws_regions); do
     log info "Listing ec2 instances in region $region.."
     aws ec2 describe-instances --region $region \
       | jq '.Reservations[].Instances[].Tags[] | select(.Key == "Name") | .Value'
-    echo -e "\n"
+    echo "\n"
   done
 }
