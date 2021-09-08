@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-. "$(command -v import)"
-# import "./datetime.sh"
-[[ -n $LOCAL ]] && source ./$(dirname $0)/datetime.sh || import ./datetime.sh
+function get() { set -e; dep=$1; [[ -n $LOCAL ]] && source $(dirname $0)/$dep || import $dep; } ; . "$(command -v import)";
+
+get ./datetime.sh
 
 # $1: log msg type
 # $2: log msg body

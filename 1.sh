@@ -1,4 +1,5 @@
-#!/usr/bin/env import
+#!/usr/bin/env bash
+. "$(command -v import)"
 
 import "awinecki/shtools/aws/aws.sh"
 
