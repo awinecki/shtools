@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 . "$(command -v import)"
 
-import "awinecki/shtools/aws.sh@0.0.2"
+import "awinecki/shtools/aws.sh"
 
 # The URL is downloaded once, cached forever, and then sourced
 # import "https://git.io/fAWiz"
