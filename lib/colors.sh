@@ -1,6 +1,8 @@
 # Colors - https://robotmoon.com/256-colors/
 # tput - https://linuxcommand.org/lc3_adv_tput.php
 
+NO_COLOR=${NO_COLOR:-}
+
 if [[ -z $NO_COLOR ]]; then
 	black=$(tput setaf 0)
 	red=$(tput setaf 1)
