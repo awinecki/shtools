@@ -16,5 +16,5 @@ log() {
   else
     local msg_color=""
   fi
-	echo "${msg_color}[$(datetime)][${type}] $2${reset}"
+	echo "${msg_color}[$(time:current_datetime)][${type}] $2${reset}"
 }
